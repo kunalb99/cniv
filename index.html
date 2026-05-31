@@ -1,0 +1,1086 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNIV — Premium Bulk Custom Apparel | Delhi, India</title>
+    <meta name="description" content="CNIV — Premium bulk custom apparel for corporates, marathons & events. Custom t-shirts, hoodies, jackets, jerseys & caps. Starting ₹70. Delhi, India.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #1a1a1a;
+            --gold: #c9a96e;
+            --gold-light: #e8d5a3;
+            --gold-dark: #8b6914;
+            --text-primary: #f5f5f5;
+            --text-secondary: #999999;
+            --text-muted: #666666;
+            --border: rgba(201, 169, 110, 0.15);
+            --border-hover: rgba(201, 169, 110, 0.4);
+            --gradient-gold: linear-gradient(135deg, #c9a96e, #e8d5a3, #c9a96e);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.9);
+            backdrop-filter: blur(20px);
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 6px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--gold);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 8% 100px;
+            position: relative;
+            background: var(--bg-primary);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center top, rgba(201, 169, 110, 0.03) 0%, transparent 60%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .hero-content h1 .gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--gold);
+            margin-bottom: 45px;
+            font-weight: 400;
+        }
+
+        .hero-divider {
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+            margin: 30px auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 16px 45px;
+            background: transparent;
+            color: var(--gold);
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            margin: 0 10px;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+
+        .btn-filled {
+            background: var(--gold);
+            color: var(--bg-primary);
+        }
+
+        .btn-filled:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 70px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .stat h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .stat p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-divider {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 20px auto 0;
+        }
+
+        /* PRODUCTS */
+        .products {
+            background: var(--bg-secondary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 45px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .product-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-5px);
+        }
+
+        .product-card i {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .product-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .product-card .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+
+        /* PRICING */
+        .pricing {
+            background: var(--bg-primary);
+        }
+
+        .pricing-table-wrapper {
+            max-width: 950px;
+            margin: 0 auto;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .pricing-table-wrapper table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-table-wrapper th {
+            background: var(--bg-card);
+            padding: 18px 25px;
+            text-align: left;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-table-wrapper td {
+            padding: 18px 25px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .pricing-table-wrapper tr:hover td {
+            background: rgba(201, 169, 110, 0.03);
+            color: var(--text-primary);
+        }
+
+        .pricing-table-wrapper td strong {
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        /* VOLUME DISCOUNT */
+        .volume-section {
+            max-width: 700px;
+            margin: 50px auto 0;
+            text-align: center;
+        }
+
+        .volume-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .volume-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .volume-item {
+            padding: 20px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .volume-item h4 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .volume-item p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-top: 5px;
+        }
+
+        /* SERVICES */
+        .services {
+            background: var(--bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            padding: 40px 30px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .service-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        /* HOW IT WORKS */
+        .process {
+            background: var(--bg-primary);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 10%;
+            right: 10%;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-num {
+            width: 70px;
+            height: 70px;
+            border: 1px solid var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            background: var(--bg-primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .process-step p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 300;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: var(--bg-secondary);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-left h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-left > p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .contact-item .icon-box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-item p {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .contact-form button {
+            padding: 18px;
+            background: var(--gold);
+            color: var(--bg-primary);
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: var(--gold-light);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--bg-primary);
+            padding: 40px 8%;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            width: 55px;
+            height: 55px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: white;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 30px;
+                gap: 20px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .volume-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-primary {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">CNIV</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Collection</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#contact">Inquire</a></li>
+        </ul>
+        <div class="nav-toggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="hero-label">Premium Custom Apparel</p>
+            <h1>Crafted for<br><span class="gold">Your Brand</span></h1>
+            <div class="hero-divider"></div>
+            <p class="subtitle">Bespoke t-shirts, hoodies, jackets, jerseys & caps — tailored for corporates, events & teams</p>
+            <p class="hero-tagline">"Wear Your Brand. Order in Bulk."</p>
+            <div>
+                <a href="#contact" class="btn-primary btn-filled">Request a Quote</a>
+                <a href="#products" class="btn-primary">Our Collection</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>50+</h3>
+                    <p>Minimum Pieces</p>
+                </div>
+                <div class="stat">
+                    <h3>₹70</h3>
+                    <p>Starting Price</p>
+                </div>
+                <div class="stat">
+                    <h3>7-12</h3>
+                    <p>Days Delivery</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <p class="section-label">What We Offer</p>
+            <h2>The Collection</h2>
+            <p>Premium quality, fully customizable with your logo, artwork & brand colors</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>T-Shirts</h3>
+                <p>Round neck, V-neck, Polo. Every fabric from polyester to bio-washed cotton.</p>
+                <div class="price">from ₹70</div>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-mitten"></i>
+                <h3>Hoodies</h3>
+                <p>Pullover & zip-up. Fleece lined with custom embroidery & screen printing.</p>
+                <div class="price">from ₹250</div>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-vest-patches"></i>
+                <h3>Jackets</h3>
+                <p>Windbreakers, bombers & varsity. Perfect for team branding.</p>
+                <div class="price">from ₹350</div>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-person-running"></i>
+                <h3>Jerseys</h3>
+                <p>Full sublimation sports jerseys. Moisture-wicking performance fabric.</p>
+                <div class="price">from ₹150</div>
+            </div>
+            <div class="product-card">
+                <i class="fas fa-hat-cowboy-side"></i>
+                <h3>Caps & Hats</h3>
+                <p>Baseball, trucker, beanies. Embroidered or printed branding.</p>
+                <div class="price">from ₹50</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <p class="section-label">Transparent Pricing</p>
+            <h2>T-Shirt Rate Card</h2>
+            <p>Choose the fabric that fits your budget and occasion</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="pricing-table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fabric</th>
+                        <th>GSM</th>
+                        <th>Price Range</th>
+                        <th>Ideal For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Polyester</td>
+                        <td>120 – 140</td>
+                        <td><strong>₹70 – ₹90</strong></td>
+                        <td>Events, Marathons, Giveaways</td>
+                    </tr>
+                    <tr>
+                        <td>Poly-Cotton Blend</td>
+                        <td>160 – 180</td>
+                        <td><strong>₹100 – ₹130</strong></td>
+                        <td>Corporate Events, Team Outings</td>
+                    </tr>
+                    <tr>
+                        <td>100% Combed Cotton</td>
+                        <td>180 – 200</td>
+                        <td><strong>₹140 – ₹170</strong></td>
+                        <td>Premium Corporate, Retail Merch</td>
+                    </tr>
+                    <tr>
+                        <td>Bio-Washed Premium</td>
+                        <td>200 – 220</td>
+                        <td><strong>₹180 – ₹200</strong></td>
+                        <td>Luxury Branding, Executive Gifting</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="volume-section">
+            <h3>Volume Discounts</h3>
+            <div class="volume-grid">
+                <div class="volume-item">
+                    <h4>5% Off</h4>
+                    <p>100 – 249 pieces</p>
+                </div>
+                <div class="volume-item">
+                    <h4>10% Off</h4>
+                    <p>250 – 499 pieces</p>
+                </div>
+                <div class="volume-item">
+                    <h4>Custom</h4>
+                    <p>500+ pieces</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="pricing-note">* Final pricing depends on quantity, print technique (screen / sublimation / DTF / embroidery), and customization level. Minimum order: 50 pieces.</p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <p class="section-label">Who We Serve</p>
+            <h2>Our Clientele</h2>
+            <p>Trusted by brands, organizers & teams across India</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🏢</div>
+                <h3>Corporate & Enterprise</h3>
+                <p>Employee uniforms, onboarding kits, corporate gifting, conference merchandise, annual day apparel — tailored to your brand guidelines.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏃</div>
+                <h3>Marathons & Sports</h3>
+                <p>Race-day t-shirts, finisher tees, volunteer uniforms, team jerseys — moisture-wicking, performance-ready fabrics.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🎪</div>
+                <h3>Events & Festivals</h3>
+                <p>College fests, concerts, product launches, exhibitions — vibrant sublimation prints that make your event memorable.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📦</div>
+                <h3>Wholesale & Retail</h3>
+                <p>Startups launching merch, resellers, NGOs, schools & colleges — best wholesale rates with consistent quality at scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+        <div class="section-header">
+            <p class="section-label">Simple & Seamless</p>
+            <h2>How It Works</h2>
+            <p>From concept to delivery in four effortless steps</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <h3>Share Requirements</h3>
+                <p>Tell us the product, quantity, fabric & share your logo or design</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <h3>Receive Quote</h3>
+                <p>Get a detailed quote with pricing breakdown within hours</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <h3>Approve & Confirm</h3>
+                <p>Review the mockup, approve the design, confirm with advance</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">04</div>
+                <h3>Delivered to You</h3>
+                <p>Production & pan-India delivery within 7–12 working days</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <p class="section-label">Let's Create Together</p>
+            <h2>Get in Touch</h2>
+            <p>Share your vision — we'll bring it to life</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-left">
+                <h3>Ready to elevate your brand?</h3>
+                <p>Fill out the form or reach out directly. We respond within 2 hours during business hours.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Call / WhatsApp</h4>
+                            <p>+91 9560252113</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>kunal.bansal35@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Delhi, India — Ships Pan-India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon-box"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon – Sat | 9 AM – 7 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/kunal.bansal35@gmail.com" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+                </div>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <select name="product" required>
+                    <option value="" disabled selected>Select Product</option>
+                    <option value="T-Shirt">Custom T-Shirt</option>
+                    <option value="Hoodie">Hoodie</option>
+                    <option value="Jacket">Jacket</option>
+                    <option value="Jersey">Jersey</option>
+                    <option value="Cap/Hat">Cap / Hat</option>
+                    <option value="Multiple">Multiple Products</option>
+                </select>
+                <div class="form-row">
+                    <input type="number" name="quantity" placeholder="Quantity (Min 50)" min="50" required>
+                    <select name="event_type">
+                        <option value="" disabled selected>Event Type</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Marathon/Sports">Marathon / Sports</option>
+                        <option value="College/Festival">College / Festival</option>
+                        <option value="Wholesale">Wholesale / Resale</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <textarea name="message" placeholder="Tell us about your requirement — design details, colors, fabric preference, deadline..."></textarea>
+                <input type="hidden" name="_subject" value="New CNIV Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">CNIV</div>
+        <p>Premium Custom Apparel — Est. Delhi, India</p>
+        <p style="margin-top: 8px;">&copy; 2026 CNIV. All rights reserved.</p>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a href="https://wa.me/919560252113?text=Hello%20CNIV%2C%20I%E2%80%99d%20like%20to%20inquire%20about%20a%20bulk%20order." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
